@@ -1,5 +1,5 @@
 #from miembros import Miembros
-from estudiante import Estudiante
+from estudiante import Alumno
 from profesor import Profesor
 from datetime import date
 
@@ -35,11 +35,9 @@ class Admin():
     
 
 
-b = Estudiante("Brandon" , "Nikes " ,"Matematica" , "libre" , id)
+
 test1=Profesor("Delfi" , int(4000000) , "Profesora" , "Logica")
 test2=Profesor("Andrea Gomez" , 5000.00 , "Profesora" , "Matematica")
 sei=Admin('REGISTRO')
 sei.agregar(test1)
 sei.agregar(test2)
-sei.agregar(b)
-sei.detalle()

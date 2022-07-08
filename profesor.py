@@ -1,32 +1,42 @@
-from miembros import Miembro
-
+import logging
+from miembro import Miembro
 class Profesor(Miembro):
-    def __init__(self, name, salario, puesto,materia):
-        super().__init__(name, salario, puesto)
-        self.materia = materia
+    def __init__(self, nombre, apellido, puesto,materia):  #herencia
+        super().__init__(nombre, apellido, puesto)
+        self.__materia = materia
+
+    @property
+    def materia(self):
+        return self.__materia
+    @materia.setter
+    def materia(self, materia):
+        self.__materia = materia
+
+
     
     def __str__(self):
         a = super().__str__()
         return  '{} Especializacion : {} '.format(a,self.materia)
-
-    def aguinaldo(self):
-        return super().aguinaldo()
-
-    def rendimiento(self):
-        print()
-        print("El rendimiento sera checkeado por 2 o mas evaluaciones anuales")
-
-    def aumento(self):
-        print( "Tu salario aumentara cada 6 meses")
     
-    def tareas(self):
-         print("debe llevar a cabo 4 clases por semana")
+    def asistir(self):
+        logging.INFO("Dar el presente en el libro de profesores")
+
+    
+    def cumplir(self):
+        logging.INFO("Cumplir los determinados dias en las determinadas aulas")
+
+
+    def corregir(self):
+        logging.INFO("Corregir examenes")
     
 
-test1=Profesor("delfi" , 400.000 , "Profesora" , "logica")
-print(test1)
-print ("tu aguinaldo sera de $" , test1.aguinaldo())
-test1.rendimiento()
-test1.aumento()
-test1.condiciones()
-test1.tareas()
+    def evaluar(self):
+        """Evaluar a los alumnos"""
+        logging.INFO("Tomar evaluacion")
+
+    def ausentarse(self):
+        return super().ausentarse()
+
+
+    
+
