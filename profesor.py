@@ -1,6 +1,6 @@
-from miembros import Miembros
+from miembros import Miembro
 
-class Profesor(Miembros):
+class Profesor(Miembro):
     def __init__(self, name, salario, puesto,materia):
         super().__init__(name, salario, puesto)
         self.materia = materia

@@ -1,10 +1,18 @@
 #from abs import miembros
+from distutils.log import INFO
 from profesor import Profesor
+from admin import Admin
+
+import logging
 
 
-test1=Profesor("delfi" , 40.000 , "Profesora" , "logica")
-print(test1)
-test1.rendimiento()
-test1.aumento()
-test1.condiciones()
-test1.tareas()
+
+logging.basicConfig(filename="logs/miPrograma.log", level=INFO)
+
+def main():
+    admin = Admin('Registro')
+    print(admin)
+
+
+if __name__ == '__main__':
+    main()

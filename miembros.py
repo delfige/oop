@@ -1,7 +1,7 @@
 from abc import ABC ,abstractmethod
 
 
-class Miembros(ABC):
+class Miembro(ABC):
     def __init__(self, name, salario , puesto):
         self.name = name
         self. salario = salario
