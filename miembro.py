@@ -52,7 +52,7 @@ class Miembro(ABC):
     @abstractmethod
     def ausentarse(self):
         """Funcion de ausentarse"""
-        logging.INFO("No concurrir a la institucion")
+        pass
 
     @abstractmethod
     def __str__(self) :

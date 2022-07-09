@@ -1,7 +1,7 @@
 import logging
 from miembro import Miembro
 class Profesor(Miembro):
-    def __init__(self, nombre, apellido, puesto,materia):  #herencia
+    def __init__(self, nombre, apellido, puesto,materia): 
         super().__init__(nombre, apellido, puesto)
         self.__materia = materia
 
@@ -35,7 +35,7 @@ class Profesor(Miembro):
         logging.INFO("Tomar evaluacion")
 
     def ausentarse(self):
-        return super().ausentarse()
+        logging.info("No asistir a la institucion")
 
 
     

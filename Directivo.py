@@ -17,23 +17,21 @@ class Directivo(Miembro):
         a = super().__str__()
         return  '{} Materias a cargo:{} '.format(a,self.materia)
     def asistir(self):
-     logging.INFO("Asistir a la institucion")
+     logging.info("Asistir a la institucion")
 
     
     def cumplir(self):
-     logging.INFO("Cumplir los dias establecidos")
+     logging.info("Cumplir los dias establecidos")
 
 
     def corregir(self):
-     logging.INFO("Corregir")
+     logging.info("Corregir")
     
 
     def evaluar(self):
         pass
 
     def ausentarse(self):
-        return super().ausentarse()
+        logging.info("No asistir a la institucion")
 
 
-Direc=Directivo("Lucas", "Lopez", "Director","Ciudadania,Matematica")
-print(Direc)

@@ -3,8 +3,6 @@ import random
 from miembro import Miembro
 import logging
 
-#logging.basicConfig(filename="estudiante" ,level=logging.INFO,
-                   # format='%(levelname)s:%(message)s')
 
 class Alumno(Miembro):
     def __init__(self, nombre, apellido, puesto,condicion,id,nota):
@@ -63,9 +61,8 @@ class Alumno(Miembro):
         logging.info("La evalucion sera el viernes")
 
     def ausentarse(self):
-        (super().ausentarse())
+        logging.info("No asistir a la institucion")
 
     def __str__(self):
         a=super().__str__()
         return '{} Condicion:{} \nID de estudiante:{}\nNota:{} '.format(a,self.condicion,self.id,self.nota)
-
