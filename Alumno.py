@@ -4,6 +4,7 @@ from miembro import Miembro
 import logging
 
 
+
 class Alumno(Miembro):
     def __init__(self, nombre, apellido, puesto,condicion,id,nota):
        super().__init__(nombre, apellido, puesto)
