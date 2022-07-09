@@ -5,7 +5,7 @@ import logging
 
 logging.basicConfig(filename="logs/miPrograma.log", level=logging.INFO)
 
-Alumno1=Alumno("delfi" , "gerea", "Estudiante" , "Libre",str(id), str(8))
+Alumno1=Alumno("Delfina" , "Gerea", "Estudiante" , "Libre",id, 8)
 print(Alumno1)
 Alumno1.asistir()
 Alumno1.cumplir()
